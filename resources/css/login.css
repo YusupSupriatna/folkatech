@@ -1,0 +1,171 @@
+
+@font-face {
+    font-family: 'Gotham';
+    src:url('GothamFont/Gotham-Bold.otf') format('opentype'), /* Modern Browsers */
+       url('GothamFont/GothamBold.ttf')  format('truetype'); /* Safari, Android, iOS */
+     font-weight: 700;
+     font-style: normal;
+   }
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('GothamFont/GothamMedium.ttf')  format('truetype'); /* Safari, Android, iOS */
+        font-weight: 400;
+        font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('GothamFont/Gotham-Thin.otf') format('opentype'); /* Modern Browsers */
+        font-weight: 300;
+        font-style: normal;
+}
+
+body{
+    font-family: 'Gotham';
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    background: #FFFFFF;
+}
+
+.login_card{
+    /* Rectangle 1 */
+    margin: auto;
+    padding: 34px;
+    width: 568px;
+    height: 509px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.title{
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 25px;
+    /* identical to box height */
+
+    letter-spacing: 0.04em;
+
+    color: #730C07;
+}
+.full-width{
+    width: 100%;
+    margin: 25px 0 25px 0;
+}
+
+.full-width input {
+    width: 100%;
+    background-color: #FFFFFF!important;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding: 18px 20px;
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+
+    border: unset;
+    color: #868686;
+}
+
+input:focus {
+    border: unset !important;
+    outline: none;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+
+.card-button{
+    text-align: center;
+}
+
+.card-button button{
+    background: #EB3F36;
+    box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.17);
+    border-radius: 7px;
+    border: unset;
+
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    text-align: center;
+    padding: 21px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.smaller{
+    font-size: 14px!important;
+    font-weight: 100px!important;
+}
+.text-right{
+    text-align: right;
+}
+
+.password-group{
+    position: relative;
+}
+.password-show{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+
+    color: #730C07;
+}
+.password-show:hover{
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.hr-space {
+    margin: 40px 25px !important;
+}
+
+.card_header{
+
+}
+
+.card_body{
+
+}
+
+.button{
+
+}
+
+.back-button {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+
+    color: #730C07;
+}
+
+.back-button:hover {
+    cursor: pointer;
+}
+
+
+
+.link-register{
+    color: #730C07;
+    font-weight: 500;
+}
+
+
+.header-user{}
