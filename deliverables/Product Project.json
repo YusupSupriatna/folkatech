@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "47c95ba4-a379-4386-8ba8-15f2aeb81466",
+		"name": "Product Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2717840"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"pm.environment.set('token', res.data.access_token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}api/login?email=test@example.com&password=password",
+					"host": [
+						"{{local_url}}api"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test@example.com"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{local_url}}api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "{{local_url}}api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Index Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_url}}api/list-product?search=&limit=12&origin=&species=&roast_lavel=&tasted=&processing=",
+					"host": [
+						"{{local_url}}api"
+					],
+					"path": [
+						"list-product"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": ""
+						},
+						{
+							"key": "limit",
+							"value": "12"
+						},
+						{
+							"key": "origin",
+							"value": ""
+						},
+						{
+							"key": "species",
+							"value": ""
+						},
+						{
+							"key": "roast_lavel",
+							"value": ""
+						},
+						{
+							"key": "tasted",
+							"value": ""
+						},
+						{
+							"key": "processing",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{local_url}}api/product/1"
+			},
+			"response": []
+		}
+	]
+}
