@@ -52,14 +52,53 @@
     <nav class="breadcrumb align-content-around" aria-label="breadcrumb">
         <ol class="breadcrumb ">
             <li class="breadcrumb-items">Home</li>
-            <li class="breadcrumb-items" aria-current="page">Produk</li>
-            <li class="breadcrumb-items active" aria-current="page">Roaster Bean</li>
+            <li class="breadcrumb-items active" aria-current="page">HARIO CAFE PRESS SLIM GREY 240ML</li>
         </ol>
     </nav>
     <div class="container" style="width:100%">
-            <div class="row">
-                <div class="col"> Under Construction</div>
-                <div class="col"> Under Construction</div>
+            <div class="row full-width">
+                <div class="col col-5">
+                    <div class="card max-h-32">
+                        <img src="https://kopimukidi.com/wp-content/uploads/2022/01/IMG20220115084044-min-scaled.jpg" />
+                    </div>
+                </div>
+                <div class="col col-7">
+                    <div class="card border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">HARIO CAFE PRESS SLIM GREY 240ML</h5>
+                        <p><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></p>
+                        <p class="my-currency breadcrumb-items active">Rp 480.000</p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group w-75 mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">-</span>
+                                    </div>
+                                    <input type="text" class="form-control text-center" placeholder="0" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">+</span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col text-right">
+                                <button type="button" class="btn btn-danger mr-2">TAMBAH KE KERANJANG</button>
+                                <button type="button" class="btn btn-outline-primary icon">
+                                    <svg width="20" height="20" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3987 0.910927C17.319 0.529606 18.3054 0.33334 19.3015 0.33334C20.2977 0.33334 21.2841 0.529606 22.2044 0.910927C23.1245 1.29218 23.9605 1.85095 24.6646 2.55532C25.369 3.25946 25.9282 4.09585 26.3094 5.01596C26.6907 5.93625 26.887 6.92264 26.887 7.9188C26.887 8.91496 26.6907 9.90136 26.3094 10.8216C25.9281 11.7418 25.3693 12.5779 24.6648 13.2821C24.6648 13.2822 24.6649 13.282 24.6648 13.2821L14.3515 23.5954C13.8959 24.051 13.1572 24.051 12.7016 23.5954L2.38824 13.2821C0.965802 11.8597 0.166687 9.93043 0.166687 7.9188C0.166687 5.90718 0.965802 3.97794 2.38824 2.55551C3.81067 1.13308 5.7399 0.333964 7.75153 0.333964C9.76315 0.333964 11.6924 1.13308 13.1148 2.55551L13.5265 2.96722L13.938 2.55571C13.938 2.55577 13.9381 2.55564 13.938 2.55571C14.6422 1.85124 15.4785 1.29221 16.3987 0.910927ZM19.3015 2.66667C18.6119 2.66667 17.929 2.80255 17.2919 3.06654C16.6548 3.33053 16.0759 3.71746 15.5883 4.20523L14.3515 5.44209C13.8959 5.89771 13.1572 5.89771 12.7016 5.44209L11.4649 4.20543C10.4801 3.22058 9.14431 2.6673 7.75153 2.6673C6.35874 2.6673 5.023 3.22058 4.03815 4.20543C3.0533 5.19028 2.50002 6.52602 2.50002 7.9188C2.50002 9.31159 3.0533 10.6473 4.03815 11.6322L13.5265 21.1206L23.0149 11.6322C23.5027 11.1446 23.8898 10.5656 24.1538 9.92846C24.4178 9.29134 24.5537 8.60845 24.5537 7.9188C24.5537 7.22916 24.4178 6.54627 24.1538 5.90915C23.8898 5.27202 23.5029 4.69316 23.0151 4.20562C22.5276 3.71785 21.9483 3.33053 21.3112 3.06654C20.6741 2.80255 19.9912 2.66667 19.3015 2.66667Z" fill="#EB3F36"/>
+                                        </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="card-text">French Press dari Hario berbahan dasar kaca berwarna
+                            abu-abu di desain dengan bentuk yang ramping dan menarik.
+                            sangat cocok untuk membuat 1-2 gelas kopi.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                </div> </div>
             </div>
     </div>
 </template>
