@@ -24,7 +24,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return auth()->user();
     });
 
+    Route::resource('/list-product', ProductController::class);
+    Route::get('/product/{id}', [ProductController::class,'show']);
     // API route for logout user
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::resource('/list-product', ProductController::class);
 });

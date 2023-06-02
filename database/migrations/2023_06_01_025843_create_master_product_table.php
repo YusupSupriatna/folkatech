@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("merek");
             $table->string("product_name");
             $table->integer("rating");
-            $table->boolean("price");
+            $table->decimal("price");
             $table->string("origin");
             $table->string("species");
             $table->string("roast_lavel");

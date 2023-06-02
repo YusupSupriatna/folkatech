@@ -22,21 +22,19 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './components/App.vue';
 import Login from './components/auth/Login.vue';
 import Register from './components/auth/Register.vue';
+import Details from './components/user/Details.vue';
 import Home from './components/user/Home.vue';
-// import ProductList from './components/ProductList.vue';
-// import ProductForm from './components/ProductForm.vue';
-// import Product from './components/Product.vue';
+import store from "./store";
 
 const router = createRouter({
     history: createWebHistory(),
+    // base: process.env.APP_URL,
     routes: [
         { path: '/', component: Login },
         { path: '/login', component: Login },
         { path: '/register', component: Register },
         { path: '/home', component: Home },
-        // { path: '/products/create', component: ProductForm },
-        // { path: '/products/:id', component: Product },
-        // { path: '/products/:id/edit', component: ProductForm },
+        { path: '/detail', component: Details },
     ]
 });
 
@@ -44,5 +42,7 @@ const app = createApp(App);
 
 // Make BootstrapVue available throughout your project
 app.use(router);
+app.use(store);
+
 app.mount('#app');
 

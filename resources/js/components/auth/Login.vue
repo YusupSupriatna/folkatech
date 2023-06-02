@@ -5,44 +5,92 @@
                <h3 class="title">Masuk</h3>
             </div>
             <div class="card_body">
-                <form method="get" autocomplete="off">
+                <Form @submit="handleLogin" :validation-schema="schema">
                     <div class="full-width">
-                        <input autocomplete="off" type="text" v-model="username" placeholder="Username" />
+                        <Field autocomplete="off" type="email" name="email" v-model="email" placeholder="Username / Email" />
+                        <ErrorMessage name="email" class="error-feedback" />
                     </div>
                     <div class="full-width">
                         <div class="password-group">
-                            <input autocomplete="off" :type="type" v-model="password" placeholder="Password" />
+                            <Field autocomplete="off" :type="type" name="password" v-model="password" placeholder="Password" />
                             <div class="password-show" @click="shwoPassword" v-if="type==='password'">Show</div>
                             <div class="password-show" @click="shwoPassword" v-else>Hide</div>
                         </div>
+                        <ErrorMessage name="password" class="error-feedback" />
                     </div>
                     <div class="full-width text-right link-register font-weight-lighter">
                         <label class="link-register smaller">Lupa Password ?</label>
                     </div>
                     <div class="card-button">
-                        <button>MASUK</button>
+                        <button type="submit">MASUK</button>
                         <hr class="hr-space"/>
                         <p>Belum punya akun? <router-link to="/register" class="link-register">Daftar Sekarang</router-link></p>
                     </div>
-                </form>
+                </Form>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default{
-        data(){
-            return{
-                username:"",
-                password:"",
-                type:"password"
-            }
-        },
-        methods:{
-            shwoPassword() {
-                this.type = this.type === "password"?'text':'password'
-            }
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
+
+export default {
+    data(){
+        return{
+            email:"",
+            password:"",
+            type:"password"
         }
+    },
+  name: "Login",
+  components: {
+        Form,
+        Field,
+        ErrorMessage,
+  },
+  data() {
+    const schema = yup.object().shape({
+      email: yup.string().required("Email is required!"),
+      password: yup.string().required("Password is required!"),
+    });
+
+    return {
+      loading: false,
+      message: "",
+      schema,
+    };
+  },
+  computed: {
+    loggedIn() {
+      return this.$store.state.auth.status.loggedIn;
+    },
+  },
+  created() {
+    if (this.loggedIn) {
+      this.$router.push("/home");
     }
+  },
+  methods: {
+    handleLogin(user) {
+      this.loading = true;
+
+      this.$store.dispatch("auth/login", user).then(
+        () => {
+          this.$router.push("/home");
+        },
+        (error) => {
+          this.loading = false;
+          this.message =
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString();
+        }
+      );
+    },
+  },
+};
 </script>

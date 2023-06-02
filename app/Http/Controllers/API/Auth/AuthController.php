@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use Validator;
+use Hash;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -13,9 +14,12 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'name' => 'required|string|max:255',
+            'nama_depan' => 'required|string|max:255',
+            'nama_belakang' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8'
+            'password' => 'required|confirmed|string|min:8',
+            'password_confirmation' => 'required|string|min:8',
+            'phone' => 'required|string|min:8',
         ]);
 
         if($validator->fails()){
@@ -23,9 +27,10 @@ class AuthController extends Controller
         }
 
         $user = User::create([
-            'name' => $request->name,
+            'name' => $request->nama_depan.' '.$request->nama_belakang,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'phone' => $request->phone,
+            'password' => Hash::make($request->password),
          ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
