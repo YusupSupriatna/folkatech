@@ -223,7 +223,7 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span></p>
-                          <p class="my-currency">{{formatPrice(val.price)}}</p>
+                          <p class="my-currency breadcrumb-items active">{{formatPrice(val.price)}}</p>
                         </div>
                     </div>
                 </div>
